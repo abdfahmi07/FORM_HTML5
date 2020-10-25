@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 : Form</title>
+    <style>
+      body {
+        background-image: url("img/1.jpg");
+        background-size: cover;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      div.form-register {
+        background-color: rgba(255, 205, 116, 1);
+        float: right;
+        margin: 50px 50px auto;
+        width: 30vw;
+        height: 40vw;
+        border-radius: 15px;
+        box-shadow: 10px 10px 10px rgb(94, 94, 94);
+      }
+      h5.title {
+        margin-top: 45px;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+      }
+      .input-form {
+        margin-left: 50px;
+        margin-top: 60px;
+      }
+      .input-register {
+        margin-top: 8px;
+        border: 0;
+        border-radius: 10px;
+        height: 30px;
+        width: 60%;
+        padding-left: 10px;
+      }
+      .input-register:hover{
+        background-color: black;
+        color: white;
+      }
+      .input-register::placeholder {
+        color: rgb(111, 111, 111); 
+      }
+      .label-register {
+        font-size: 14px;
+        color: white;
+      }
+      .img-user{
+        float: left;
+        margin-top: 22px;
+        margin-right: 8px;
+      }
+      .img-password{
+        float: left;
+        margin-top: 22px;
+        margin-right: 8px;
+      }
+      .input-password {
+        margin-left: 50px;
+        margin-top: 20px;
+      }
+      .img-email{
+        float: left;
+        margin-top: 22px;
+        margin-right: 8px;
+      }
+      .input-email {
+        margin-left: 50px;
+        margin-top: 20px;
+      }
+      .form-submit {
+        margin-top: 40px;
+        margin-left: 25%;
+      }
+      .btn-submit {
+        width: 100%;
+        height: 50px;
+        width: 70%;
+        border: 0;
+        border-radius: 10px;
+      }
+      .btn-submit:hover {
+        cursor: pointer;
+        background-color: #ffa300;
+        color: white;
+      }
+      .to-login {
+        font-size: 13px;
+        margin-left: 114px;
+      }
+      .show-password {
+        margin-top: 9px;
+        margin-left: 100px;
+      }
+      .txt-show-password {
+        font-size: 12px;
+      }
+      </style>
+     <body>
+       <div class="wrapper">
+         <div class="form-register">
+          <form>
+            <h5 class="title">REGISTER</h5>
+            <hr>
+            <div class="input-form">
+              <div class="img-user">
+                <img src="img/user2.png" width="37">
+              </div>
+              <label class="label-register">Nama Lengkap</label>
+              <br>
+              <input type="text" class="input-register" placeholder="Masukkan Nama Lengkap" name="fullname"> 
+            </div>
+            <div class="input-email">
+              <div class="img-email">
+                <img src="img/email.png" width="40">
+              </div>
+              <label class="label-register">Email</label>
+              <br>
+              <input type="email" class="input-register" placeholder="Masukkan Email" name="fullname"> 
+            </div>
+            <div class="input-password">
+              <div class="img-password">
+                <img src="img/lock.png" width="40">
+              </div>
+              <label class="label-register">Password</label>
+              <br>
+              <input type="password" class="input-register" id="myInput" placeholder="Masukkan Password" name="password"> 
+            </div>
+            <div class="show-password">
+              <input type="checkbox" id="show-password" onclick="showPassword()"> 
+              <label class="txt-show-password">Show Password</label>
+            </div>
+            <div class="form-submit">
+              <button class="btn-submit">Register</button>
+            </div>
+            <p class="to-login">Do you have any account? <a href="#">Login</a></p>
+          </form>
+        </div>
+       </div>
+       <script>
+         function showPassword() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+              x.type = "text";
+            } else {
+              x.type = "password";
+            }
+          }
+       </script>
+     </body>
+</html>
